@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Comfortaa;
+    src: url(Comfortaa-VariableFont_wght.ttf);
+}
+
+body {
+    height:100%;
+    font-family: 'Comfortaa';
+    overflow: hidden;
+    background-color: rgba(0, 255, 255, 0.072);
+}
+
+#bg {
+    background: url('cool.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    filter: blur(1px);
+    opacity: 0.2;
+    transform: scale(5);
+    pointer-events: none;
+}
+
+#main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40%;
+    height: 40%;
+    transform: translate(-50%, -50%);
+}

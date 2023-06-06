@@ -1,0 +1,49 @@
+@font-face{
+	font-family: Comfortaa;
+	src: url(Comfortaa-VariableFont_wght.ttf);
+}
+
+body{
+	font-family:'Comfortaa';
+    background: linear-gradient(45deg,#00b7ff,#8800ff);
+    background-repeat:space;
+}
+
+.top-cover{
+	margin:-10px;
+	padding:15%;
+	background: url('test.jpeg');
+	color:white;
+	text-align:center;
+}
+
+.welcome{
+	animation-duration: 1s;
+    	animation-fill-mode: forwards;
+}
+
+.welcome:hover{
+	animation-name: enlarge;
+}
+
+.welcome:not(:hover){
+	animation-name: shrink;
+}
+
+@keyframes enlarge{
+    from{
+        font-size: 40px;
+    }
+    to{
+        font-size: 60px;
+    }
+}
+
+@keyframes shrink{
+    from{
+        font-size: 60px;
+    }
+    to{
+        font-size: 40px;
+    }
+}
