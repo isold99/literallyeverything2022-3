@@ -1,0 +1,117 @@
+body{
+    background: linear-gradient(45deg,#00ffbb,#001aff) no-repeat center fixed;
+    color:aliceblue
+}
+
+#all{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#centerpiece{
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    text-align: center;
+    padding: 20px;
+}
+
+#centerpiece:hover{
+    animation-name: enlarge;
+}
+
+#centerpiece:not(:hover) {
+    animation-name: shrink;
+}
+
+#center-rect{
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#showallBtn:hover, #center-rect:hover{
+    animation-name: change-color;
+}
+
+#showallBtn:not(:hover), #center-rect:not(:hover){
+    animation-name: unchange-color;
+}
+
+#showallBtn{
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    padding: 10px;
+    border-radius: 20px;
+    bottom: 0;
+}
+
+#c-logo{
+    position: absolute;
+}
+
+#content, #instruction{
+    text-align: center;
+    padding: 2px;
+}
+
+#content:target, #instruction{
+    animation: appear 2s forwards;
+    animation: blur 3s forwards;
+}
+
+@keyframes blur{
+    from{
+        filter: blur(10px);
+    }
+    to{
+        filter:blur(0px);
+    }
+}
+
+@keyframes enlarge{
+    from{
+        font-size: 16px;
+    }
+    to{
+        font-size: 20px;
+    }
+}
+
+@keyframes shrink{
+    from{
+        font-size: 20px;
+    }
+    to{
+        font-size: 16px;
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes change-color{
+    from{
+        background:rgba(0, 0, 0, 0.2);
+    }
+    to{
+        background: rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes unchange-color{
+    from {
+        background: rgba(255, 255, 255, 0.4);
+    }
+    to {
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
